@@ -1,0 +1,13 @@
+html {cursor: default}
+a {cursor: pointer;}
+body,h1 {font-family: 'Press Start 2P', cursive;}
+body, html {height: 100%}
+.bgimg {
+  background: black;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+#perm-title {
+  display: none;
+}
