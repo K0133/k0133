@@ -9,7 +9,6 @@ body {
   background-image: url("../assets/images/koi.png");
   background-repeat: no-repeat, repeat;
   background-attachment: fixed;
-  /* background-position: center; */
   background-position-y: 5%;
   background-position-x: 50%;
   background-size: 25%;
@@ -44,8 +43,7 @@ input[type=text] {
   border: 0px solid white;
   border-bottom-width: 2px;
   outline: none;
-  /* text-align: center; */
-  letter-spacing: 50px;
+  letter-spacing: 40px;
   background: transparent;
   margin-left: 5px;
   color: transparent;
@@ -71,7 +69,6 @@ p {
 h1 {
   margin-bottom: -300px;
   font-family: 'Press Start 2P', cursive;
-  /* font-family: 'Raleway Dots', cursive; */
   font-size: 25px;
   color: white;
 }
