@@ -43,7 +43,7 @@ function switchToDate() {
 
   document.getElementById("k0133-container").style.display = "none";
 
-  const countDownDate = new Date("Jun 19, 2012 21:00:00").getTime();
+  const countDownDate = new Date("Jun 19, 2020 21:00:00").getTime();
 
   let x = setInterval(function () {
 
@@ -60,7 +60,7 @@ function switchToDate() {
 
     if (distance < 0) {
       clearInterval(x);
-      document.getElementById("countdown").innerHTML = `<a id="button" href="https://example.com">Let's Begin</a>`;
+      document.getElementById("countdown").innerHTML = `<a id="button" href="https://www.youtube.com/watch?v=H5RjAgYNu9k">Let's Begin</a>`;
     }
   }, 1000);
 

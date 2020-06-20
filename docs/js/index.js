@@ -21,7 +21,7 @@ function submitPin() {
   document.getElementById("code").value = "";
   
   var xhr = new XMLHttpRequest();
-  const url = 'http://localhost:5000/initium/code?pin=' + pin + '&ip=' + publicIP;
+  const url = 'http://api.k0133.xyz/initium/code?pin=' + pin + '&ip=' + publicIP;
   xhr.open("GET", url)
   xhr.send();
   
