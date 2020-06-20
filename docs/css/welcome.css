@@ -1,13 +1,65 @@
-html {cursor: default}
-a {cursor: pointer;}
-body,h1 {font-family: 'Press Start 2P', cursive;}
-body, html {height: 100%}
+html {
+  cursor: default;
+  background-color: black;
+}
+
+a {
+  cursor: pointer;
+}
+
+body, h1 {
+  font-family: 'Press Start 2P', cursive;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
 .bgimg {
   background: black;
   min-height: 100%;
   background-position: center;
   background-size: cover;
 }
+
+#countdown {
+  width: 100%;
+}
+
 #perm-title {
   display: none;
+}
+
+#button {
+  padding: 20px;
+  border: solid 3px white;
+  background-color: black;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  font-family: 'Press Start 2P', cursive;
+  box-shadow: 5px 5px 0px white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  width: 300px
+}
+
+#button:hover {
+  animation: press .1s forwards;
+}
+
+@keyframes press {
+  0% {
+    box-shadow: 5px 5px 0px white;
+  }
+  100% {
+    box-shadow: 0px 0px 0px white;
+    /* transform: translate(-98px, -28px) */
+    transform: translate(-144px, -33px)
+  }
 }

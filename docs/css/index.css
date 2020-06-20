@@ -5,7 +5,7 @@ html {
 
 body {
   height: 100%;
-  background: #1b1b1b;
+  background: black;
   background-image: url("../assets/images/koi.png");
   background-repeat: no-repeat, repeat;
   background-attachment: fixed;
@@ -25,58 +25,86 @@ body {
 }
 
 .centerHozAndVert {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -35%);
-    margin-top: -50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -35%);
+  margin-top: -50px;
+}
+
+input[type=text] {
+  height: 70px;
+  width: 350px;
+  font-size: 35px;
+  border: 0px solid white;
+  border-bottom-width: 2px;
+  outline: none;
+  /* text-align: center; */
+  letter-spacing: 50px;
+  background: transparent;
+  margin-left: 5px;
+  color: transparent;
+  text-shadow: 0 0 0 white;
+  padding-left: 10px;
+}
+
+input[type=text]::-webkit-inner-spin-button, input[type=text]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=text] {
+  -moz-appearance: textfield;
+}
+
+p {
+  font-size: 50px;
+  color: white;
+  margin-left: -30px;
+  cursor: pointer;
+}
+
+h1 {
+  margin-bottom: -300px;
+  font-family: 'Press Start 2P', cursive;
+  /* font-family: 'Raleway Dots', cursive; */
+  font-size: 25px;
+  color: white;
+}
+
+#button {
+  display: none;
+  padding: 20px;
+  border: solid 3px white;
+  background-color: black;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  font-family: 'Press Start 2P', cursive;
+  box-shadow: 5px 5px 0px white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+}
+
+#button:hover {
+  animation: press .1s forwards;
+}
+
+@keyframes press {
+  0% {
+    box-shadow: 5px 5px 0px white;
   }
 
-  input[type = number] {
-    height: 100px;
-    width: 500px;
-    font-size: 50px;
-    border: 0px solid white;
-    border-bottom-width: 2px; 
-    outline: none;
-    /* text-align: center; */
-    letter-spacing: 50px;
-    background: transparent;
-    margin-left: 5px;
-    color: transparent;text-shadow: 0 0 0 white;
-    padding-left: 10px;
+  100% {
+    box-shadow: 0px 0px 0px white;
+    transform: translate(-98px, -28px)
   }
-
-  input[type=number]::-webkit-inner-spin-button, 
-  input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none; 
-  }
-
-  input[type=number] {
-    -moz-appearance: textfield;
-  }
-
-  p {
-    font-size: 50px;
-    color: white;
-    margin-left: -30px;
-    cursor: pointer;
-  }
-
-  h1 {
-    margin-bottom: -300px;
-    font-family: 'Press Start 2P', cursive;
-    /* font-family: 'Raleway Dots', cursive; */
-    font-size: 25px;
-    color: white;
-  }
-
-  #image {
-    display: none;
-    width: 100%;
-  }
+}

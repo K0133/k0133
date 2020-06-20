@@ -4,7 +4,7 @@ const cors = require('cors');
 const app = express();
 
 const correctPin = process.env.PIN;
-const imageUrl = process.env.IMAGE_URL;
+const payloadURL = process.env.PAYLOAD_URL;
 const loggingURL = process.env.LOGGING_URL;
 
 app.use(cors());
@@ -16,6 +16,11 @@ app.get('/', (req, res) => {
 
 app.get('/initium/code', (req, res) => {
 
+  if (!req.query.pin) {
+    res.status(403)
+    return res.send("Pin not provided")
+  }
+
   let enteredPin = req.query.pin;
   let ip = req.query.ip;
   let success = false;
@@ -26,13 +31,19 @@ app.get('/initium/code', (req, res) => {
 
   if (enteredPin === correctPin) {
     success = true;
-    response = `{"success":${success}, "imageUrl":"${imageUrl}"}`;
+    response = {
+      success,
+      payload_url: payloadURL
+    };
   } else {
-    response = `{"success":${success}, "message":"Inccorect Pin"}`;
+    response = {
+      success,
+      message: "Incorrect Pin"
+    };
   }
 
   initiumCodeLog(ip, enteredPin, success);
-  res.send(JSON.parse(response));
+  res.send(response);
   return;
 });
 
